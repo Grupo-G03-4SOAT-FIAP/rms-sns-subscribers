@@ -5,7 +5,7 @@ A set of Lambda functions that processes Amazon SNS messages in the [RMS project
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-| Lambda Function           | CI                                                                                                                                                                                                                                            | CD                 |
+| Lambda Function           | CI Status                                                                                                                                                                                                                                     | CD Status          |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
 | cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber) | [badge do CD aqui] |
 
@@ -34,7 +34,7 @@ Build your application with the `sam build` command.
 rms-sns-subscribers$ sam build
 ```
 
-The SAM CLI installs dependencies defined in `hello-world/package.json`, compiles TypeScript with esbuild, creates a deployment package, and saves it in the `.aws-sam/build` folder.
+The SAM CLI installs dependencies defined in `<function-name>/package.json`, compiles TypeScript with esbuild, creates a deployment package, and saves it in the `.aws-sam/build` folder.
 
 Test a single function by invoking it directly with a test event. An event is a JSON document that represents the input that the function receives from the event source. Test events are included in the `events` folder in this project.
 
@@ -53,12 +53,12 @@ rms-sns-subscribers$ curl http://localhost:3000/
 
 ## Unit tests
 
-Tests are defined in the `hello-world/tests` folder in this project. Use NPM to install the [Jest test framework](https://jestjs.io/) and run unit tests.
+Tests are defined in the `<function-name>/tests` folder in this project. Use NPM to install the [Jest test framework](https://jestjs.io/) and run unit tests.
 
 ```bash
-rms-sns-subscribers$ cd hello-world
-hello-world$ npm install
-hello-world$ npm run test
+rms-sns-subscribers$ cd function-name
+function-name$ npm install
+function-name$ npm run test
 ```
 
 ## Cleanup

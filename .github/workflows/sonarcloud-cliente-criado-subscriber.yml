@@ -3,16 +3,17 @@ name: SonarCloud cliente-criado-subscriber
 # name: "SonarCloud" + <nome da aplicação ou function Lambda>
 # Em monorepos, cada aplicação precisa ter seu próprio workflow de CI do SonarCloud, 
 # pois dessa forma o SonarCloud consegue analisar cada aplicação como projetos separados.
+# Mais informações em https://docs.sonarsource.com/sonarcloud/advanced-setup/monorepo-support/
 on:
   push:
     branches:
       - main
     paths:
-      - 'cliente-criado-subscriber' # Diretório onde se encontra a aplicação dentro do monorepo
+      - 'cliente-criado-subscriber/**' # Diretório onde se encontra a aplicação dentro do monorepo
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'cliente-criado-subscriber' # Diretório onde se encontra a aplicação dentro do monorepo
+      - 'cliente-criado-subscriber/**' # Diretório onde se encontra a aplicação dentro do monorepo
 jobs:
   sonarcloud:
     name: SonarCloud
@@ -22,8 +23,10 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Install dependencies
+        working-directory: ./cliente-criado-subscriber
         run: npm ci
       - name: Test and coverage
+        working-directory: ./cliente-criado-subscriber
         run: npm run test --coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master

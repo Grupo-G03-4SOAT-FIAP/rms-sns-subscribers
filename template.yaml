@@ -1,0 +1,53 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  rms-sns-subscribers
+
+  Sample SAM Template for rms-sns-subscribers
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  UserPoolId:
+    Type: String
+    Description: Você pode consultar o User pool ID no Console da AWS.
+  UserPoolAWSRegion:
+    Type: String
+    Default: us-east-1
+    Description: Região do User pool.
+
+Resources:
+  ClienteCriadoFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: cliente-criado-subscriber/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+      Environment:
+        Variables:
+          USER_POOL_ID: !Ref UserPoolId
+          USER_POOL_AWS_REGION: !Ref UserPoolAWSRegion
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+        - app.ts
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  ClienteCriadoFunction:
+    Description: "Hello World Lambda Function ARN"
+    Value: !GetAtt ClienteCriadoFunction.Arn
+  ClienteCriadoFunctionIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt ClienteCriadoFunctionRole.Arn

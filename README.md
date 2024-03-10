@@ -1,12 +1,13 @@
 # rms-sns-subscribers
 A set of Lambda functions that processes Amazon SNS messages in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff).
 
-[badge do CD aqui]
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Grupo-G03-4SOAT-FIAP_rms-sns-subscribers&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-sns-subscribers)
-
 ![AWS LAMBDA](https://img.shields.io/badge/AWS%20Lambda-FF9900.svg?style=for-the-badge&logo=AWS-Lambda&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+| Lambda Function           | CI                                                                                                                                                                                                                                            | CD                 |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber) | [badge do CD aqui] |
 
 > [!TIP]
 > When you publish messages to your Amazon SNS topic, your Lambda function reads the contents of the message and outputs it to Amazon CloudWatch Logs.\

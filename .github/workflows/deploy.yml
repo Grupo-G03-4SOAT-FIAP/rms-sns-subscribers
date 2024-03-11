@@ -16,11 +16,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - run: sam build --use-container
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
       - name: SAM Deploy
         run: |
           # Run SAM Deploy
-          sam deploy \
+          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset \
             --parameter-overrides \
               'UserPoolId=${{ secrets.USER_POOL_ID }},UserPoolAWSRegion=${{ secrets.USER_POOL_AWS_REGION }}'
 

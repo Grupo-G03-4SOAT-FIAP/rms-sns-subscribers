@@ -1,17 +1,20 @@
 # rms-sns-subscribers
 A set of Lambda functions that processes Amazon SNS messages in the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff).
 
+[![SAM Validate and Build](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-validate.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-validate.yml)
+[![SAM Deploy](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-deploy.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-deploy.yml)
+
 ![AWS LAMBDA](https://img.shields.io/badge/AWS%20Lambda-FF9900.svg?style=for-the-badge&logo=AWS-Lambda&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-| Lambda Function           | CI Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | CD Status                                                                                                                                                                                                             |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber)<br>[![SAM Validate and Build](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-validate.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-validate.yml) | [![SAM Deploy](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-deploy.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-sns-subscribers/actions/workflows/sam-deploy.yml) |
-
 > [!TIP]
 > When you publish messages to your Amazon SNS topic, your Lambda function reads the contents of the message and outputs it to Amazon CloudWatch Logs.\
 > _To learn more about Lambda using AWS Lambda with Amazon SNS please visit [Tutorial: Using AWS Lambda with Amazon Simple Notification Service](https://docs.aws.amazon.com/lambda/latest/dg/with-sns-example.html)._
+
+| Lambda Function | Quality Gate Status | Coverage |
+|---|---|---|
+| cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=coverage)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber) |
 
 ## Pré-requisitos
 
@@ -73,9 +76,6 @@ sam delete --stack-name rms-sns-subscribers
 
 BFF do Restaurant Management System (RMS)\
 https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff
-
-Amazon Cognito Lambda triggers\
-https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers
 
 ## Requisitos
 

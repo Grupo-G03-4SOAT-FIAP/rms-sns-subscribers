@@ -22,7 +22,7 @@ jobs:
           # Run SAM Deploy
           sam deploy \
             --parameter-overrides \
-              'UserPoolId=${{ secrets.USERPOOLID }},UserPoolAWSRegion=${{ secrets.USERPOOLAWSREGION }}'
+              'UserPoolId=${{ secrets.USER_POOL_ID }},UserPoolAWSRegion=${{ secrets.USER_POOL_AWS_REGION }}'
 
 # Workflow baseado nos exemplos fornecidos pela documentação da AWS em 
 # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/deploying-using-github.html

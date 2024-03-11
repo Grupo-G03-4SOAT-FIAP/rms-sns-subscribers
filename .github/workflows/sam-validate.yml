@@ -23,7 +23,7 @@ jobs:
           sam validate
       - name: SAM Build
         run: |
-          # Run SAM Build
+          sam build \
             --parameter-overrides \
               'UserPoolId=${{ secrets.USER_POOL_ID }},UserPoolAWSRegion=${{ secrets.USER_POOL_AWS_REGION }}'
 

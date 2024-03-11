@@ -10,13 +10,6 @@ jobs:
       env-name: ${{ steps.env-name.outputs.environment }}
     steps:
       - uses: actions/checkout@v2
-      - name: Install Dependencies with Apt Get
-        run: |
-          sudo apt-get update
-          sudo apt-get install python3.8 jq -y
-      - name: Install Pip Dependencies
-        run: |
-          pip3 install pytest
       - name: Configure AWS credentials
         id: creds
         uses: aws-actions/configure-aws-credentials@v1

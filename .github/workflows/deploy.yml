@@ -17,6 +17,12 @@ jobs:
           aws-region: us-east-1
       - run: sam build --use-container
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+      - name: SAM Deploy
+        run: |
+          # Run SAM Deploy
+          sam deploy \
+            --parameter-overrides \
+              'UserPoolId=${{ secrets.USERPOOLID }},UserPoolAWSRegion=${{ secrets.USERPOOLAWSREGION }}'
 
 # Workflow baseado nos exemplos fornecidos pela documentação da AWS em 
 # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/deploying-using-github.html

@@ -5,9 +5,9 @@ A set of Lambda functions that processes Amazon SNS messages in the [RMS project
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-| Lambda Function           | CI Status                                                                                                                                                                                                   | CD Status          |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Grupo-G03-4SOAT-FIAP_rms-bff&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-bff) | [badge do CD aqui] |
+| Lambda Function           | CI Status                                                                                                                                                                                                                                     | CD Status          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| cliente-criado-subscriber | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rms-sns-subscribers_cliente-criado-subscriber&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rms-sns-subscribers_cliente-criado-subscriber) | [badge do CD aqui] |
 
 > [!TIP]
 > When you publish messages to your Amazon SNS topic, your Lambda function reads the contents of the message and outputs it to Amazon CloudWatch Logs.\

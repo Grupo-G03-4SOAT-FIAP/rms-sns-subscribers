@@ -80,6 +80,7 @@ https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers
 ## Requisitos
 
 *aws-cli/2.15.10*\
-*SAM CLI, version 1.110.0*
+*SAM CLI, version 1.110.0*\
+*Node.js 20.x*
 
 ![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)

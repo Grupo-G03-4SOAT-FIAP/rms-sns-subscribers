@@ -82,4 +82,4 @@ https://github.com/Grupo-G03-4SOAT-FIAP/rms-cognito-triggers
 *aws-cli/2.15.10*\
 *SAM CLI, version 1.110.0*
 
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-sns-subscribers)
+![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)
